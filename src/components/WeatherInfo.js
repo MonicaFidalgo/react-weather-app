@@ -4,18 +4,6 @@ export default function WeatherInfo(props) {
   let cssClass = props.data.description.replace(/ /g, '');
   return (
     <div>
-      <div className="row mb-5">
-        <div class="col-12">
-          <form>
-            <div className="d-flex">
-              <input type="search" placeholder="Search a city" className="form-control" autoFocus="on" />
-              <button className="btn btn-outline-light" type="button">
-                <i className="fas fa-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
       <div className="row mb-4">
         <div className="col-6">
           <h1>{props.data.city}</h1>
