@@ -1,3 +1,90 @@
 .Weather {
+    padding: 20px 30px;
     border: 1px solid #ddd;
+    background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+}
+
+/*weather colors*/
+
+.clearsky {
+  background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%)
+}
+
+
+.fewclouds {
+  background-image: linear-gradient(to top, #f83600 0%, #f9d423 100%);
+}
+
+.scatteredclouds {
+  background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);
+}
+
+.brokenclouds {
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+}
+
+.showerrain {
+  background: linear-gradient(#0D68D0, #423B8C);
+}
+
+.rain {
+  background-color: linear-gradient(#11d2f1, #0e96d0);
+}
+
+.thunderstorm {
+  background-color: linear-gradient( #b85efc, #7b0dd1);
+}
+
+.snow {
+  background: linear-gradient(#31B7B7, #D0EBF9);
+}
+
+.mist {
+  background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+}
+
+/* end of weather colors */
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../assets/img/default.svg")
+}
+
+.img-clearsky {
+  background-image: url("../assets/img/fewclouds.svg")
+}
+
+.img-fewclouds {
+  background-image: url("../assets/img/fewclouds.svg")
+}
+
+.img-scatteredclouds {
+  background-image: url("../assets/img/scatteredclouds.svg")
+}
+
+.img-brokenclouds {
+  background-image: url("../assets/img/brokenclouds.svg")
+}
+
+.img-showerrain {
+  background-image: url("../assets/img/rain.svg")
+}
+
+.img-rain {
+  background-image: url("../assets/img/rain.svg")
+}
+
+.img-thunderstorm {
+  background-image: url("../assets/img/thunderstorm.svg")
+}
+
+.img-snow {
+  background-image: url("../assets/img/snow.svg")
+}
+
+.img-mist {
+  background-image: url("../assets/img/mist.svg")
 }

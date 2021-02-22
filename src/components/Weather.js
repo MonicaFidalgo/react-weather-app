@@ -6,6 +6,8 @@ import './Weather.css'
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({});
 
+  let path = '../assets/img/';
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -17,22 +19,37 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       ready: true
     });
+
   };
 
   if (weatherData.ready) {
+    let cssClass = weatherData.description.replace(/ /g, '');
     return (
-      <div className="Weather">
-        <form>
-          <div className="d-flex">
-            <input type="search" placeholder="Search a city" className="form-control" autoFocus="on" />
-            <button type="submit" value="Search" className="btn btn-primary">Search</button>
+      <div className={`Weather ${cssClass}`}>
+        <div className="row mb-5">
+          <div class="col-12">
+            <form>
+              <div className="d-flex">
+                <input type="search" placeholder="Search a city" className="form-control" autoFocus="on" />
+                <button className="btn btn-outline-light" type="button">
+                  <i className="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li><FormattedDate date={weatherData.date} /></li>
-          <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
+        </div>
+        <div className="row mb-4">
+          <div className="col-6">
+            <h1>{weatherData.city}</h1>
+            <ul>
+              <li><FormattedDate date={weatherData.date} /></li>
+              <li className="text-capitalize">{weatherData.description}</li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <div className={`img img-${cssClass}`}></div>
+          </div>
+        </div>
         <div className="row">
           <div className="col-6">
             <img src={weatherData.iconUrl} alt={weatherData.description} />
