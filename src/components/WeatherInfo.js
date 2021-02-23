@@ -6,7 +6,7 @@ export default function WeatherInfo(props) {
   let cssClass = props.data.description.replace(/ /g, '');
   return (
     <div>
-      <div className="row mb-4">
+      <div className="row mb-5">
         <div className="col-6">
           <h1>{props.data.city}</h1>
           <ul>
@@ -16,7 +16,7 @@ export default function WeatherInfo(props) {
         </div>
         <div className="col-6">
           <div className="d-flex align-items-center">
-            <WeatherIcon code={props.data.icon} alt={props.data.description} />
+            <WeatherIcon code={props.data.icon} size={64} />
             <WeatherTemperature temperature={props.data.temperature} />
           </div>
           <ul>

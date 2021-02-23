@@ -19,14 +19,14 @@ export default function WeatherTemperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="d-flex">
+      <div className="d-flex ml-2">
         <h3>{Math.round(props.temperature)}</h3>
         <span className="font-weight-bold">ºC | <a href="/" onClick={setFahrenheit}>ºF</a></span>
       </div>
     )
   } else {
     return (
-      <div className="d-flex">
+      <div className="d-flex ml-2">
         <h3>{Math.round(convertFahrenheit())}</h3>
         <span className="font-weight-bold">ºF |<a href="/" onClick={setCelsius}>ºC</a></span>
       </div>
