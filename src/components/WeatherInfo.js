@@ -1,5 +1,6 @@
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   let cssClass = props.data.description.replace(/ /g, '');
@@ -16,7 +17,7 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="d-flex align-items-center">
             <WeatherIcon code={props.data.icon} alt={props.data.description} />
-            <h3>{Math.round(props.data.temperature)}ºC</h3>
+            <WeatherTemperature temperature={props.data.temperature} />
           </div>
           <ul>
             <li className="text-capitalize">{props.data.description}</li>
